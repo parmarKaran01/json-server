@@ -75,8 +75,8 @@ const json = JSON.stringify({
     },
   ],
 });
-fs.writeFile("/tmp/db.json", json, "utf8", (err) => {
-  console.log(err);
+fs.writeFile("/tmp/db.json", json, "utf8", (err, data) => {
+  console.log(err, data);
 });
 
 server.use(middlewares);
